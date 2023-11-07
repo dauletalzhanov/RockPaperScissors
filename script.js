@@ -42,6 +42,7 @@ function game(playerSelection = null) {
     let computerScore = 0
 
     if (playerSelection == null) {
+        
         for (let i = 0; i < 5; i++) {
             let playerChoice = prompt("Rock, Paper or Scissors? ")
             let result = play(playerChoice, getComputerChoice())

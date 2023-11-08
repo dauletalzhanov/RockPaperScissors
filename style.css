@@ -1,44 +1,87 @@
 body {
-    background-color: grey;
+    background-color: #873e23;
     color: black;
     margin: 0;
     display: flex;
     flex-direction: column;
-        
+    justify-content: space-between;    
+    font-family: Verdana, Garamond, system-ui , "Gill Sans" , sans-serif;
+}
+
+h1 {
+    text-align: center;
+    margin: 0;
+    padding: 2rem 0;
+    background-color: #eab676;
+    color: black;
+    font-size: 48px;
+
 }
 
 
 .score {
     display: flex;
     margin: auto;
+    flex-direction: column;
+    text-align: center;
+    background-color: beige;
+    border-bottom: 1px solid;
 }
 
-h1 {
-    text-align: center;
-    margin: 0;
-    padding: 0%;
-    
+.score div {
+    display: flex;
+    flex-direction: row;
+    margin: 2rem 0;
 }
+
+.score div div {
+    text-align: center;
+    display: flex;
+    margin: 0 9.37rem;
+    flex-direction: column;
+    justify-content: flex-end;
+    width: 15rem;
+}
+
+
+.instruct {
+    background-color: #eab676;
+
+    padding: 1rem 0;
+    text-align: center;
+    border-bottom: 1px solid black;
+}
+
 
 .buttons {
     display: flex;
+    background-color: beige;
 
-    border: 1px solid black;
     margin: auto;
     justify-content: center;
+    padding: 1rem;
 
 }
 
 .buttons div {
     display: flex;
-    border: 1px solid black;
     margin: 0 5rem;
     flex-direction: column;
+    justify-content: flex-end;
 }
 
 button {
     width: 200px;
     height: 40px;
-    color:black;
-    background-color: lightskyblue;
+    color:whitesmoke;
+    background-color: darkred;
+    border-radius: 8%;
+}
+
+h4 {
+    text-align: center;
+    padding: 0.64rem 0;
+    margin: 0;
+    background-color: black;
+    color: white;
 }

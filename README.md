@@ -1,3 +1,4 @@
 # RockPaperScissors
 
-this is a work in progress...
+
+https://dauletalzhanov.github.io/RockPaperScissors/

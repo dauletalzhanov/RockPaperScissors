@@ -56,7 +56,102 @@ function game(playerSelection = null) {
         console.log(result)
     }
 
-    else
-        console.log("butt")
+    else {
+        let playerScore = 0
+        let computerScore = 0
+        
+        while(playerScore != 0 || computerScore != 0) {
+            let result = play(playerSelection, getComputerChoice())
+
+            if (result == "You win!")
+                playerScore++
+            else
+                computerScore++
+
+        }
+    }
+
+}
+
+//////////////////////////////////////////////////////////////
+const rock =        document.getElementById('rock')
+const paper =       document.getElementById('paper')
+const scissors =    document.getElementById('scissors')
+
+const rockImg =        document.querySelector('.rock')
+const paperImg =       document.querySelector('.paper')
+const scissorsImg =    document.querySelector('.scissors')
+
+const userScore = document.querySelector('.user-score')
+const computerScore = document.querySelector('.computer-score')
+
+const log = document.querySelector('.log')
+
+rock.addEventListener('click', function(e){
+    gameOn('Rock')
+})
+
+paper.addEventListener('click', function(e){
+    gameOn('Paper')
+})
+
+scissors.addEventListener('click', function(e){
+    gameOn('Scissors')
+})
+
+rockImg.addEventListener('click', function(e){
+    gameOn('Rock')
+})
+
+paperImg.addEventListener('click', function(e){
+    gameOn('Paper')
+})
+
+scissorsImg.addEventListener('click', function(e){
+    gameOn('Scissors')
+})
+
+
+
+function gameOn(playerSelection) {
+
+    if (userScore.textContent == 5 || computerScore.textContent == 5){
+        computerScore.textContent = 0
+        userScore.textContent = 0
+        log.textContent = ''
+    }
+
+    result = play(playerSelection, getComputerChoice())
+
+    if (result == "You win!") {
+        userScore.textContent++
+        console.log("User wins")
+    } 
+    else if (result == "You Lose!") {
+        computerScore.textContent++
+        console.log("Computer Wins")
+    }
+    else {
+        console.log("Draw!")
+    }
+
+    latest = document.createElement('p')
+    latest.textContent = result
+
+    log.appendChild(latest)
+
+    if (userScore.textContent == 5){
+        latest.textContent = "You win the game"
+        latest.style.cssText = "font-size: 20px; font-weight: 900; color:darkred;"
+        latest.style.fontWeight = "900";
+        log.appendChild(latest)
+    } else if (computerScore.textContent == 5) {
+        latest.textContent = "Computer wins the game"
+        latest.style.cssText = "font-size: 20px; font-weight: 900; color:darkred;"
+        latest.style.fontWeight = "900";
+        log.appendChild(latest)
+    }
+
+
 
 }

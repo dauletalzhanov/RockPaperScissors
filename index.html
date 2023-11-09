@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
     <link rel="stylesheet" href="style.css">
-    <script src="script.js"></script>
+    <script src="script.js" defer></script>
 
     <title>Rock - Paper - Scissors</title>
 </head>
@@ -18,12 +18,16 @@
             <div class="user">
                 <img src="images/boy.svg">
                 <p>User:</p>
-                <p class="user-score"></p>
+                <p class="user-score">0</p>
             </div>
+            
+            <div class="log">
+            </div>
+
             <div class="computer">
                 <img src="images/laptop.svg">
                 <p>Computer:</p>
-                <p class="computer-score"></p>
+                <p class="computer-score">0</p>
             </div>
         </div>
     </div>
@@ -36,21 +40,21 @@
 
     <div class="buttons ">
         <div> 
-            <img src="images/rock.svg">
-            <button>Rock</button>
+            <img class="rock" src="images/rock.svg">
+            <button id="rock">Rock</button>
         </div>
 
         <div> 
-            <img src="images/paper.svg">
-            <button>Paper</button>
+            <img class="paper" src="images/paper.svg">
+            <button id="paper">Paper</button>
         </div>
 
         <div> 
-            <img src="images/scissors.svg">
-            <button>Scissors</button>
+            <img class="scissors" src="images/scissors.svg">
+            <button id="scissors">Scissors</button>
         </div>
     </div>
 
-    <h4>The Odin Project - Daulet Alzhanod (c)</h4>
+    <h4>The Odin Project - Daulet Alzhanov (c)</h4>
 </body>
 </html>
